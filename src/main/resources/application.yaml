@@ -25,14 +25,14 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQL9Dialect
   datasource:
       type: com.zaxxer.hikari.HikariDataSource
-      url: jdbc:postgresql://db-camunda-community7.ctegeqbib2kt.us-west-2.rds.amazonaws.com:5432/postgres
-      username: camundausr
-      password: prometheus123$
+      url: jdbc:postgresql://database-1.c7co404k8fb1.us-west-1.rds.amazonaws.com:5432/postgres
+      username: postgres
+      password: postgres
 
   hikari:
-        jdbc-url: jdbc:postgresql://db-camunda-community7.ctegeqbib2kt.us-west-2.rds.amazonaws.com:5432/postgres
-        username: camundausr
-        password: prometheus123$
+        jdbc-url: jdbc:postgresql://database-1.c7co404k8fb1.us-west-1.rds.amazonaws.com:5432/postgres
+        username: postgres
+        password: postgres
         driver-class-name: org.postgresql.Driver
         pool-name: CAMUNDA-HIKARI-POOL
         idle-timeout: 3000
