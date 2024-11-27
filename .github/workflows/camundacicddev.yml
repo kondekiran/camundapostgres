@@ -1,4 +1,4 @@
-name: Camunda CI/CD to deploy on dev oregn
+name: Camunda CI/CD to deploy 
 
 on: workflow_dispatch
   
@@ -22,10 +22,10 @@ jobs:
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v21
         with:
-          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID_DEV }}
-          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY_DEV }}
-          application_name: ${{ vars.CAMUNDA_EB_APP_NAME_DEV }}
-          environment_name: ${{ vars.CAMUNDA_EB_ENV_NAME_DEV }}
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: ${{ vars.CAMUNDA_EB_APP_NAME }}
+          environment_name: ${{ vars.CAMUNDA_EB_ENV_NAME }}
           version_label: ${{ github.ref_name }}-${{ github.run_number }}
           region: ${{ vars.AWS_REGION_ACTIVE }}
           deployment_package: camunda-project-1.0.0-SNAPSHOT.jar
