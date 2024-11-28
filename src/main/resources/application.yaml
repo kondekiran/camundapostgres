@@ -1,6 +1,6 @@
 camunda.bpm.admin-user:
-  id: prcamunda
-  password: Pr@metheu$789
+  id: devcamunda
+  password: devcamunda@123
 camunda.bpm:
   webapp:
     application-path: /camunda
